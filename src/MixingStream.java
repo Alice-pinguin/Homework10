@@ -16,7 +16,7 @@ public class MixingStream {
     }
     public static void main(String[] args) {
         System.out.println(MixingStream.zip(Arrays.stream(new String[]{"Hi", " have" ,"good"}),
-                Arrays.stream(new String[]{"everyone,", "a", "day"}))
+                Arrays.stream(new String[]{"everyone,", "a", "night"}))
                 .collect(Collectors.joining(" ")));
     }
 }

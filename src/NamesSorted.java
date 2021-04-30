@@ -6,12 +6,12 @@ import java.util.stream.Stream;
 import static java.util.Comparator.reverseOrder;
 public class NamesSorted {
     public static void main(String[] args) {
-                   Stream<String> names =
+        List<String> reversed =
                         Arrays.asList("Artem", "Jane", "Kolya", "Borys", "Oksana", "Ivan")
                                 .stream()
                                 .map(String::toUpperCase)
-                                .sorted(Comparator.reverseOrder());
-                List<String> reversed = names.collect(Collectors.toList());
+                                .sorted(Comparator.reverseOrder())
+                                .collect(Collectors.toList());
                 System.out.println(reversed);
             }
         }

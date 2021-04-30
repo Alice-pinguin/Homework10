@@ -3,12 +3,8 @@ import java.util.stream.Stream;
 
 public class EndlesslyStream {
     public static Stream<Long> crateLinearCongruentGenerator (long a, long c,
-                                                              long m, long seed) {
-        if (m >= 2 && (a < m && a >= 0) && (c < m && c >= 0) && (seed < m && seed >= 0)) {
-            return Stream.iterate(seed, n -> (a * n + c) % m);
-        } else {
-            throw new RuntimeException();
-        }
+                                                              long m, long seed) throws RuntimeException {
+            return Stream.iterate (seed, n -> (a * n + c) % m);
     }
     public static void main(String[] args) {
         System.out.print(EndlesslyStream.crateLinearCongruentGenerator(
